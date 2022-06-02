@@ -1,4 +1,5 @@
 ﻿using EstudoDeTeste.Cliente.Implementacao;
+using Newtonsoft.Json;
 using System.Text.Json;
 
 namespace Program {
@@ -28,6 +29,8 @@ namespace Program {
 
                     Cliente ClienteMaisBonito = new Cliente(nomeUsuario, telUsuario, emailUsuario);
                     tabela.Excluir(ClienteMaisBonito);
+                    var CLienteJson = JsonConvert.SerializeObject(tabela);
+                    Console.WriteLine(CLienteJson);
                     break;
 
                 case 1:
@@ -43,6 +46,8 @@ namespace Program {
 
                     Cliente ClienteMaisBonitoC = new Cliente(nomeUsuarioC, telUsuarioC, emailUsuarioC);
                     tabela.Cadastrar(ClienteMaisBonitoC);
+                    var CLienteJson = JsonConvert.SerializeObject(tabela);
+                    Console.WriteLine(CLienteJson);
                     break;
             }
         }
