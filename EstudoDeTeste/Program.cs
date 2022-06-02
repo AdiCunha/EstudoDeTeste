@@ -29,8 +29,8 @@ namespace Program {
 
                     Cliente ClienteMaisBonito = new Cliente(nomeUsuario, telUsuario, emailUsuario);
                     tabela.Excluir(ClienteMaisBonito);
-                    var CLienteJson = JsonConvert.SerializeObject(tabela);
-                    Console.WriteLine(CLienteJson);
+                    var CLienteJsonE = JsonConvert.SerializeObject(tabela);
+                    Console.WriteLine(CLienteJsonE);
                     break;
 
                 case 1:
